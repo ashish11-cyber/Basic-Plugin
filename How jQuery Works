@@ -1,0 +1,23 @@
+jQuery Object Methods
+
+Before we write something about jQuery, first we have to understand, how jQuery works.
+$("a").css("color", "red");
+
+Basic Plugin Authoring
+
+$.fn.greenify = function()
+{
+this.css( "color", "green" );
+};
+$( "a" ).greenify();
+
+
+Chaining
+
+$.fn.greenify = function()
+{
+this.css( "color" , "green" );
+return this;
+}
+
+$( "a" ).greenify().addClass( "greenified" );
